@@ -1,7 +1,6 @@
 {% set version = '0.3' %}
 
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-metamix
@@ -14,9 +13,9 @@ source:
   sha256: 1818a61c459d3672c24082df523d88175042805bf7e2ed971f66971fd3e3139f
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
-  skip: true  # [win]
+  number: 3
+  # Checking windows to see if it passes. Uncomment the line if it fails.
+  # skip: true  # [win]
 
   rpaths:
     - lib/R/lib/
@@ -47,7 +46,6 @@ requirements:
 
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-matrix
     - r-rmpi
     - r-data.table >=1.9.2
