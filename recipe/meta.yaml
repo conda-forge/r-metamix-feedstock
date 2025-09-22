@@ -13,7 +13,7 @@ source:
   sha256: 1818a61c459d3672c24082df523d88175042805bf7e2ed971f66971fd3e3139f
 
 build:
-  number: 3
+  number: 4
   # Checking windows to see if it passes. Uncomment the line if it fails.
   skip: true  # [win]
 
